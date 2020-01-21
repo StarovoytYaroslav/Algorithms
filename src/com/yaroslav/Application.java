@@ -1,5 +1,6 @@
 package com.yaroslav;
 
+import com.yaroslav.search.ArrayBub;
 import com.yaroslav.search.DataArray;
 import com.yaroslav.search.HighArray;
 import com.yaroslav.search.OrdArray;
@@ -7,7 +8,7 @@ import com.yaroslav.search.OrdArray;
 public class Application {
 
 	public static void main(String[] args) {
-		dataArrayTest();
+		bubbleSortTest();
 	}
 	//Array Test
 	public static void arrayTest() {
@@ -61,6 +62,28 @@ public class Application {
 		arr.delete("Stimson");
 		arr.delete("Yee");
 		arr.delete("Creswell");
+		
+		arr.display();
+	}
+	//Bubble Sort Test
+	public static void bubbleSortTest() {
+		int maxSize = 100;
+		ArrayBub arr = new ArrayBub(maxSize);
+		
+		arr.insert(77);
+		arr.insert(99);
+		arr.insert(44);
+		arr.insert(55);
+		arr.insert(22);
+		arr.insert(88);
+		arr.insert(11);
+		arr.insert(00);
+		arr.insert(66);
+		arr.insert(33);
+		
+		arr.display();
+		
+		arr.bubbleSort();
 		
 		arr.display();
 	}
